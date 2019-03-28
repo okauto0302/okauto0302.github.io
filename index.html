@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<!--
+	Identity by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>{{챗봇이름}}</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main">
+						<header>
+							<span class="avatar"><img src="{{챗봇이미지}}" alt="" /></span>
+							<h1>{{챗봇이름}}</h1>
+							<p>{{챗봇 설명}}</p>
+						</header>
+						<hr />
+						<h2>저는 이런 챗봇이에요.</h2>
+						<form method="post" action="#">
+							<div class="fields">
+								<div class="field">
+									페르소나1
+								</div>
+								<div class="field">
+									페르소나2
+								</div>
+								<div class="field">
+									페르소나3
+								</div>
+							</div>
+							
+						</form>
+						<hr />
+						<footer>
+							<ul class="icons">
+								<li><a href="javascript:click('info')" class="fa-info-circle">소개</a></li>
+								<li><a href="javascript:click('map')" class="fa-map">위치</a></li>
+								<li><a href="javascript:click('contact')" class="fa-envelope-open-o">Contact</a></li>
+							</ul>
+						</footer>
+					</section>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="copyright">
+							<li>&copy; Study</li><li>Design: <a href="https://danbee.ai">danbee.Ai</a></li>
+						</ul>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script>
+				if ('addEventListener' in window) {
+					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-preload\b/, ''); });
+					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+				}
+			</script>
+
+			<div id="frogue-container" class="position-right-bottom"
+				data-chatbot="baebdfb3-d089-4b04-9bb2-2fd9e920a2eb"
+				data-user="me">
+			</div>
+			<script>
+				(function(d, s, id){
+					var js, fjs = d.getElementsByTagName(s)[0];
+					if (d.getElementById(id)) {return;}
+					js = d.createElement(s); js.id = id;
+					js.src = "https:\/\/danbee.ai/js/plugins/frogue-embed/frogue-embed.min.js";
+					fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'frogue-embed'));
+			</script>
+
+			<script>
+				function click(v) {
+					
+					if (frogueReadyFlag) {
+						if (v === 'info') {
+							froguePushEvent('clickEvent', {'name':'info'});
+						} else if (v === 'map') {
+							froguePushEvent('clickEvent', {'name':'map'});
+						} else if (v === 'contact') {
+							froguePushEvent('clickEvent', {'name':'contact'});
+						}
+					}
+
+					return false;
+				}
+			</script>
+
+	</body>
+</html>
